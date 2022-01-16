@@ -2,7 +2,7 @@ var requestURL = "";
 
 let btn = document.createElement("button");
 btn.innerHTML = "Search";
-document.body.appendChild(btn);
+document.getElementById("artistform").appendChild(btn);
 const params =
 
 btn.onclick = function() {
