@@ -1,12 +1,14 @@
 var requestURL = "";
 
 let btn = document.createElement("button");
-btn.innerHTML = "Search";
+btn.innerHTML = "Search Title";
 document.getElementById("artistform").appendChild(btn);
-const params =
+// let artistbtn = document.createElement("button");
+// artistbtn.innerHTML = "Search Artist"
+// document.getElementById("buylink").appendChild(artistbtn);
 
 btn.onclick = function() {
-    var lyricquery = document.getElementById('lyricinput').value
+    var lyricquery = document.getElementById('lyricinput').value;
     var finalURL = "https://musicbrainz.org/ws/2/recording?fmt=json&query=" + lyricquery;
     console.log(finalURL);
 
