@@ -79,16 +79,22 @@
             <form id = "artistform">
                 <label for="lyricinput">Enter Song Title </label><br>
                 <input type="text" id="lyricinput" name="lyricinput" placeholder="Title"><br>
-                <div id ="searchbtn"></div>
+                <!-- <div id ="searchbtn"></div> -->
             
             </form>
             <table id = "infotable">
                 <tr>
                     <th>Artist</th>
                 </tr>
-              
-
             </table>
+            <br>
+            <br>
+            <form id = "artistsearch">
+                <label for="artistinput">Enter Name of Artist</label>
+                <input type="text" id = "artistinput" name ="artistinput" placeholder = Artist><br>
+                
+            </form>
+
 
 
     </section>
@@ -97,6 +103,9 @@
   <section class="hero is-danger is-fullheight">
     <div class="hero-body">
       <div class="">
+          <textarea id = "artistbio"></textarea>
+          <br>
+          <br>
         <p class="title">
           Mondegreen
         </p>
@@ -104,8 +113,13 @@
     </div>
   </section>
 
+<script type="text/javascript" src=".\assets\javascript\lastfm.api.md5.js"></script>
+<script type="text/javascript" src="./assets/javascript/lastfm.api.js"></script>
+
+<script type="text/javascript" src="./assets/javascript/lastfm.api.cache.js"></script>
 
 <script src="./assets/javascript/script.js"></script>
+
 </body>
 
 </html>
