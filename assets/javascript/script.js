@@ -1,4 +1,4 @@
-var requestURL = "";
+
 
 let btn = document.createElement("button");
 btn.innerHTML = "Search Title";
@@ -87,18 +87,5 @@ lastfm.artist.getInfo({artist: artistname}, {success: function(data){
 
 });
 }
-// setGlobal();
-// console.log(requestURL);
-
-// fetch(requestURL)
-// .then(function(response){
-//     console.log(response.json)
-//     return response.json();
-// })
-// .then(function(data){
-//     console.log(data)
-// });
-
-
 
 console.log("test");
