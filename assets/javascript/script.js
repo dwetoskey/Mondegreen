@@ -48,6 +48,11 @@ btn.onclick = function() {
 }
 
 
+
+
+
+
+
 artistbtn.onclick = function() {
 
 var artistname = document.getElementById('artistinput').value;
@@ -67,14 +72,20 @@ var lastfm = new LastFM({
 /* Load some artist info. */
 lastfm.artist.getInfo({artist: artistname}, {success: function(data){
   /* Use data. */
-  console.log(data);
- 
+  var biodata = document.getElementById('artistbio');
+  console.log(data.artist.bio.content);
 
+  biodata.innerText = data.artist.bio.content;
+    // event.preventDefault;
 }, error: function(code, message){
 
-    data.appendChild("artistbio");
-  /* Show error message. */
-}});
+    
+
+}
+
+
+
+});
 }
 // setGlobal();
 // console.log(requestURL);
