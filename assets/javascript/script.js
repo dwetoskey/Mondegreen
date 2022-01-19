@@ -1,14 +1,18 @@
 var requestURL = "";
 
 let btn = document.createElement("button");
-btn.innerHTML = "Search";
+btn.innerHTML = "Search Title";
 document.getElementById("artistform").appendChild(btn);
-const params =
+let artistbtn = document.createElement("button");
+artistbtn.innerHTML = "Search Artist"
+document.getElementById("artistsearch").appendChild(artistbtn);
 
 btn.onclick = function() {
-    var lyricquery = document.getElementById('lyricinput').value
+    var lyricquery = document.getElementById('lyricinput').value;
     var finalURL = "https://musicbrainz.org/ws/2/recording?fmt=json&query=" + lyricquery;
     console.log(finalURL);
+
+    event.preventDefault();
 
     fetch(finalURL)
     .then(response => response.json())
@@ -36,40 +40,52 @@ btn.onclick = function() {
                 }
               
                 pagetable.appendChild(tablerow);
+                
                  
 
             })
-
-
-            
-    
-    // function setGlobal() {
-    //     requestURL = finalURL;
-    // };
-
-
-    //console.log(JSON.stringify(finalURL));
-    // var myArr = JSON.stringify(finalURL);
-    // const urlstring = JSON.parse(myArr, );
-    // console.log(urlstring);
-
-
-    // fetch (finalURL, {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(data),
-    // })
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         console.log('Success:', data);
-    //     })
-    //     .catch((error) => {
-    //         console.error('Error:', error);
-    //     });
-    
        
+}
+
+
+
+
+
+
+
+artistbtn.onclick = function() {
+
+var artistname = document.getElementById('artistinput').value;
+event.preventDefault();
+
+var cache = new LastFMCache();
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '349b2487cfb05e84fc790dd9a24c650b',
+  apiSecret : '011c836b4712d4360f14a821f3c8c281',
+  cache     : cache
+});
+
+
+
+/* Load some artist info. */
+lastfm.artist.getInfo({artist: artistname}, {success: function(data){
+  /* Use data. */
+  var biodata = document.getElementById('artistbio');
+  console.log(data.artist.bio.content);
+
+  biodata.innerText = data.artist.bio.content;
+    // event.preventDefault;
+}, error: function(code, message){
+
+    
+
+}
+
+
+
+});
 }
 // setGlobal();
 // console.log(requestURL);

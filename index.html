@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mondagreen</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="/Users/user/Project 1_ Mondegreen/Mondegreen/assets/css/styles.css">
   </head>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -94,19 +93,63 @@
 
         <div class="">
 
-            <form class= "box">
+
+
+            <form id = "artistform" class= "box">
               <div class="field">
-                <label class="lyricinput">Enter Lyrics To Be Searched</label><br>
-                <div class="control">
+                <label for="lyricinput">Enter Song Title </label><br>
+                 <div class="control">
                 <input class="input is-primary" type="lyricinput" type="lyricinput" placeholder="Lyrics"><br>
                 </div>
               </div>
-              <button class="button is-primary">Search</button> 
+            
+            </form>
+            <table id = "infotable">
+                <tr>
+                    <th>Artist</th>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <form id = "artistsearch">
+                <label for="artistinput">Enter Name of Artist</label>
+                <br>
+                <input type="text" id = "artistinput" name ="artistinput" placeholder = Artist>
+                <br>
+  
+                
+            </form>
+            <div id = "artistbio" style="height:50%;width:80%;overflow:auto;background-color:yellowgreen;color:white;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;"></div>
+
 
 
     </section>
 
 
+
+
+  <section class="hero is-danger is-fullheight">
+    <div class="hero-body">
+      <div class="">
+          <br>
+          <br>
+        <p class="title">
+          Mondegreen
+        </p>
+      </div>
+    </div>
+  </section>
+      
+
+<script type="text/javascript" src=".\assets\javascript\lastfm.api.md5.js"></script>
+<script type="text/javascript" src="./assets/javascript/lastfm.api.js"></script>
+
+<script type="text/javascript" src="./assets/javascript/lastfm.api.cache.js"></script>
+
+
 <script src="./assets/javascript/script.js"></script>
+
+
+</body>
 
 </html>
