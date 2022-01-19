@@ -55,13 +55,8 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
-            </a>
             
-            <a class="button is-light">
-              Log in
-            </a>
+
           </div>
         </div>
       </div>
@@ -74,10 +69,26 @@
     <div class="hero-body">
       <div class="">
         <h1 class="title is-1">Mondegreen</h1>
-       <article class="media" >
-         <figure class="media-right">
-             <img src="/Users/user/Project 1_ Mondegreen/Mondegreen/assets/images/1084517-200.png">
+        <article class="media m-4" >
+            <figure class="media-left is-flex">
+                <img src=".\assets\images\1084517-200.png">
+            </figure>
+        </article>
+      </div>
+      <div class="tile is-primary">
+        <article class="tile is-child notification is-primary">
+          <div class="content">
+            <p class="title">Welcome!</p>
+            <p class="subtitle"></p>
+            <div class="content">
+              <p>Heard a song on the radio and just need to know more about the artist? We're here for you. First, search using the name of the song to bring up artists that have a song with that title. Next, search for that artist and scroll down to read their bio. Thank you for using Mondegreen!</p>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
+    
+    
   
   </section>
 
@@ -85,60 +96,56 @@
      <section class="hero is-info">
        <div class="hero-body">
          <p class="title">
-           Artist Title
+           Please Enter The Title Of The Song To Get The Artist
          </p>
        </div>
      </section>
       
 
-        <div class="">
+        
 
 
 
-            <form id = "artistform" class= "box">
-              <div class="field">
+            <form id = "artistform" class= "box, field">
+              
                 <label for="lyricinput">Enter Song Title </label><br>
-                 <div class="control">
-                <input class="input is-primary" type="lyricinput" type="lyricinput" placeholder="Lyrics"><br>
-                </div>
-              </div>
+                
+                <input type= "text" id ="lyricinput" class="input is-primary, control" name="lyricinput" placeholder="Song Title"><br>
+                
+              
             
             </form>
-            <table id = "infotable">
+            <table id = "infotable" class = "table is-bordered is-striped">
                 <tr>
                     <th>Artist</th>
                 </tr>
             </table>
+            <section class="hero is-info">
+                <div class="hero-body">
+                  <p class="title">
+                    Please Enter The Name Of The Artist You Would Like To Know More About
+                  </p>
+                </div>
+              </section>
             <br>
             <br>
-            <form id = "artistsearch">
+            <form id = "artistsearch" class= "box, field">
                 <label for="artistinput">Enter Name of Artist</label>
                 <br>
-                <input type="text" id = "artistinput" name ="artistinput" placeholder = Artist>
+                <input type="text" id = "artistinput" class="input is-primary, control" name ="artistinput" placeholder = "Artist Name">
                 <br>
   
                 
             </form>
-            <div id = "artistbio" style="height:50%;width:80%;overflow:auto;background-color:yellowgreen;color:white;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;"></div>
-
+            <div class="hero is-primary is-size-3-desktop">
+                <div id = "artistbio" ></div>
+            </div>
 
 
     </section>
 
 
 
-
-  <section class="hero is-danger is-fullheight">
-    <div class="hero-body">
-      <div class="">
-          <br>
-          <br>
-        <p class="title">
-          Mondegreen
-        </p>
-      </div>
-    </div>
-  </section>
       
 
 <script type="text/javascript" src=".\assets\javascript\lastfm.api.md5.js"></script>
